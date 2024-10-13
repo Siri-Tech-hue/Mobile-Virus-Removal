@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mobile Virus Removal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            text-align: center;
+            padding: 50px;
+        }
+        h1 {
+            color: #333;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        #result {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Mobile Virus Removal Tool</h1>
+    <p>Click the button below to scan your device for malware.</p>
+    <button id="scanBtn">Scan for Viruses</button>
+    <p id="result"></p>
+
+    <script>
+        document.getElementById("scanBtn").addEventListener("click", function() {
+            document.getElementById("result").textContent = "Scanning in progress...";
+            setTimeout(function() {
+                document.getElementById("result").textContent = "No malware detected! Your device is clean.";
+            }, 3000);
+        });
+    </script>
+</body>
+</html>
